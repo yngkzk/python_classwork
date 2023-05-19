@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 users_req = input("Введите длину стороны квадрата: ")
 users_numb = int(users_req)
 result = users_numb ** 2
