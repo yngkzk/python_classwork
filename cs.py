@@ -1,4 +1,8 @@
-users_req = input("Enter the length of the side of the square: ")
-users_numb = int(users_req)
-result = users_numb ** 2
-print("Your square area: ", result)
+us_sal = input("Enter your current salary: ")
+sal = int(us_sal)
+us_cred = input("Enter your monthly credit payment: ")
+cred = int(us_cred)
+us_debt = input("Enter your utility bills: ")
+debt = int(us_debt)
+loses = sal - (cred + debt)
+print("Your remaining money: $", loses, sep="")
