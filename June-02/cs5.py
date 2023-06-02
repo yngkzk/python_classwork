@@ -1,6 +1,10 @@
-def simplefun(user_in1, user_in2):
-    if user_in1 and user_in2 == 0:
+def remainder(a, b):
+    if a and b == 0:
         return 1
-    return (user_in2) - (user_in1 // user_in2)
-mod = simplefun(13, 7)
+    quotient = a // b  
+    product = quotient * b  
+    remainder = a - product  
+    return remainder
+
+mod = remainder(13, 6)
 print(mod)
