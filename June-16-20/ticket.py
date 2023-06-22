@@ -18,14 +18,14 @@ class Ticket:
         self.passenger_age = pas_age
 
     def __repr__(self):
-        msg = "Билет №%s: %s -- %s" % (self.number, self.source, self.destination)
+        msg = "Ticket №%s: %s -- %s" % (self.number, self.source, self.destination)
         return msg
 
     def show(self):
-        msg = "Билет №%s: %s -- %s" % (self.number, self.source, self.destination)
-        msg += "  Пассажир: %s, %s лет, ИИН: %s" % (self.passenger_name,
-                                                    self.passenger_age, self.passenger_iin)
+        msg = "Ticket №%s: %s -- %s" % (self.number, self.source, self.destination)
+        msg += "  Passenger: %s, %s age, IIN: %s" % (self.passenger_name,
+                                                     self.passenger_age, self.passenger_iin)
         print(msg)
 
 
-print("Это билет!", __name__)
+print("This is a ticket!", __name__)

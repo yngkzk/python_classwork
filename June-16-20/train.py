@@ -17,18 +17,18 @@ class Train:
     def board(self, person):
         ticket = self.kassa.get_ticket(person.iin, self.source, self.destination)
         if ticket:
-            message = "Добро пожаловать %s, ваш поезд №%s прибыл, от %s до %s." % (person.name,
-                                                                                   self.number, self.source,
-                                                                                   self.destination)
+            message = "Welcome %s, your train N%s has arrived, from %s to %s." % (person.name,
+                                                                                  self.number, self.source,
+                                                                                  self.destination)
             print(message)
             self.kassa.delete_ticket(ticket)
         else:
-            print("Нет билета")
+            print("You have not ticket")
 
     def show(self):
-        message = "Поезд №%s, от станции %s до станции %s." % (self.number,
-                                                               self.source, self.destination)
+        message = "Train N%s, from station %s to station %s." % (self.number,
+                                                                 self.source, self.destination)
         print(message)
 
 
-print("Это поезд!", __name__)
+print("This is a train!", __name__)
