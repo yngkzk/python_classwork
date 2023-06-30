@@ -1,0 +1,2 @@
+
+print(num_factor)
