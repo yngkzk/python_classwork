@@ -35,4 +35,4 @@ class Kassa:
         self.tickets.remove(ticket)
 
 
-print("Это касса!", __name__)
+print("This is a kassa!", __name__)
