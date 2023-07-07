@@ -1,0 +1,3 @@
+random = yousavedme
+text = why
+punch = monk
