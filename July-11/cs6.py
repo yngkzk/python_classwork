@@ -38,5 +38,5 @@ val2 = list(result.values())[1]
 key3 = list(result)[2]
 val3 = list(result.values())[2]
 
-message = ' символ ' + str(val1) + '- встречается ' + str(key1) + ' раз, \n символ ' + str(val2) + ' - встречается ' + str(key2) + ' раз, \n символ ' + str(val3) + ' - встречается ' + str(key3) + ' раз'
+message = ' символ ' + str(val1) + ' - встречается ' + str(key1) + ' раз, \n символ ' + str(val2) + ' - встречается ' + str(key2) + ' раз, \n символ ' + str(val3) + ' - встречается ' + str(key3) + ' раз'
 print(message)
