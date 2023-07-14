@@ -1,0 +1,1 @@
+{"type": "forecast", "duration": 3, "city": "Hallo", "country_code": "kz"}
