@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3b11252-ad85-4bee-9c25-46d52256c1cd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/July-21 CW/cs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July-21 CW/ex1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July-21 CW/ex2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July-21 CW/ex3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July-21 CW/ex4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July-21 CW/ex5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July-21 CW/ex6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/July-21 CW/ex7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/July-21 CW/ex5.py" beforeDir="false" afterPath="$PROJECT_DIR$/July-21 CW/ex5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,11 +216,6 @@
           <url>file://$PROJECT_DIR$/July-21 CW/cs.py</url>
           <line>20</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/July-21 CW/ex5.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

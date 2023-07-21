@@ -16,18 +16,21 @@ class Point:
 
 
 class Figure:
-    x = Point.x
-    y = Point.y
     points = []
 
-    def add(self, point1=0, point2=0):
-        new_point = [point1, point2]
+    def add(self, point=None):
+        if point is None:
+            return
+        new_point = point
         self.points.append(new_point)
 
     def perimeter(self):
         dist = 0
         for i in range(len(self.points)):
-            dist += distance(self.points[i][0], self.points[i+1][1])
+            next = i+1
+            if next >= len(self.points):
+                next = 0
+            dist += distance(self.points[i], self.points[next])
         return dist
 
 
@@ -53,19 +56,19 @@ def test_Point():
 
 def test_Figure():
     triangle = Figure()
-    assert triangle.perimeter == 0
+    assert triangle.perimeter() == 0
 
     triangle.add(Point(5, 5))
-    assert triangle.perimeter == 0
+    assert triangle.perimeter() == 0
 
     triangle.add(Point(8, 5))
-    assert triangle.perimeter == 6
+    assert triangle.perimeter() == 6
 
     triangle.add(Point(8, 8))
-    assert triangle.perimeter == 6 + (9 + 9) ** 0.5
+    assert triangle.perimeter() == 6 + (9 + 9) ** 0.5
 
     triangle.add()
-    assert triangle.perimeter == 6 + (9 + 9) ** 0.5
+    assert triangle.perimeter() == 6 + (9 + 9) ** 0.5
 
 
 test_Point()
