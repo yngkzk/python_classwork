@@ -1,0 +1,31 @@
+{
+    "soldiers": [
+        {
+            "first_name": "Gleb",
+            "last_name": "Drexel",
+            "height": 171
+        },
+        {
+            "first_name": "Urfin",
+            "last_name": "Juice",
+            "height": 166
+        },
+        {
+            "first_name": "Napoleon",
+            "last_name": "Bonaparte",
+            "height": 177
+        },
+        {
+            "first_name": "Patricia",
+            "last_name": "Kaas",
+            "height": 152
+        }
+    ],
+    "sizes": {
+        "xs": {"from":  0, "to":  165},
+        "s": {"from": 165, "to": 175},
+        "m": {"from": 175, "to":  180},
+        "l": {"from":  180, "to": 190},
+        "xl": {"from": 190, "to": 299}
+    }
+}
