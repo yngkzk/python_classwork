@@ -27,8 +27,8 @@ soldier_info = info['soldiers'][2]['first_name'] + ' ' + info['soldiers'][2]['la
 print(soldier_info)
 
 # sizes = [value['to'] for value in info['sizes'].values()]
-sizes = ' '.join(map(lambda x: str(x['to']), info['sizes'].values()))  # в лямбе нужно работать только с (x) в данном случае
-print(sizes)
+sizes = map(lambda x: str(x['to']), info['sizes'].values())  # в лямбе нужно работать только с (x) в данном случае
+print(' '.join(sizes))
 
 '''
 {"xs": 5, "s": 2, "m": 4}
