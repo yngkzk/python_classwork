@@ -5,11 +5,8 @@ def get_debts(people):
     for val in people.values():
         if val > 0:
             debtors += 1
-        else:
-            continue
     total_sum = sum(people.values())
     return {'debtors': debtors, 'total': total_sum}
-
 
 
 def test_get_debts():
