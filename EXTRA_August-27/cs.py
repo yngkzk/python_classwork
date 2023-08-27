@@ -23,6 +23,13 @@ out = open('out.json', 'w')
 json.dump(result, out)
 out.close()
 
+soldier_info = info['soldiers'][2]['first_name'] + ' ' + info['soldiers'][2]['last_name']
+print(soldier_info)
+
+# sizes = [value['to'] for value in info['sizes'].values()]
+sizes = ' '.join(map(lambda x: str(x['to']), info['sizes'].values()))
+print(sizes)
+
 '''
 {"xs": 5, "s": 2, "m": 4}
 '''
