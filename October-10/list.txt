@@ -1,0 +1,1 @@
+salt@ @bar.kz andy@mail hello@gmail.com halo@m fas@txt.xt
