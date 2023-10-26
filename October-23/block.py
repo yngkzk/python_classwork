@@ -3,35 +3,47 @@ from controllable import Controllable
 
 
 class Block(Controllable):
+    SPEED = 5
+
     def __init__(self, size, color):
-        super().__init__()
         self.size = size
         self.color = color
         self.position = [0, 0]
-        self.obj = pygame.Surface(self.position)
+        super().__init__()
+        self.body = pygame.Surface(size)
+        self.body.fill(self.color)
 
-    def defaultBinds(self):
+    def default_controls(self):
         return (
-            {"key": pygame.K_w, "action": lambda: print(self.moveUp)},
-            {"key": pygame.K_a, "action": lambda: print(self.moveLeft)},
-            {"key": pygame.K_d, "action": lambda: print(self.moveRight)},
-            {"key": pygame.K_s, "action": lambda: print(self.moveDown)}
+            {"key": pygame.K_w, "action": self.moveUp},
+            {"key": pygame.K_a, "action": self.moveLeft},
+            {"key": pygame.K_d, "action": self.moveRight},
+            {"key": pygame.K_s, "action": self.moveDown}
         )
+    
+    def set_possition(self, possition):
+        self.hide()
+        self.position = possition
+        self.show()
 
     def moveUp(self):
-        self.position[1] -= 1
+        self.position[1] -= self.SPEED
+    
+    def moveDown(self):
+        self.position[1] += self.SPEED
 
     def moveLeft(self):
-        self.position[0] -= 1
+        self.position[0] -= self.SPEED
 
     def moveRight(self):
-        self.position[0] += 1
-
-    def moveDown(self):
-        self.position[1] += 1
+        self.position[0] += self.SPEED
 
     def show(self):
-        self.obj.fill(self.color)
+        self.owner.blit(self.body, self.position)
 
-    def hide(self):
+    def hide():
         pass
+
+
+    def placeTo(self, owner):
+        self.owner = owner
