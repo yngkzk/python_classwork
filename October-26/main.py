@@ -1,7 +1,6 @@
 from app import Application
 
-
 if __name__ == '__main__':
-    app = Application((1024, 800), 'Cool Game')
+    app = Application((800, 600), "Game for fun")
     app.run()
-    
+
