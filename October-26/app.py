@@ -41,7 +41,7 @@ class Application():
                 if event.type == pygame.QUIT:
                     running = False
             for n in self.objects:
-                n.check_controls()
+                n.update()
             self.screen.fill(self.background_color)
             for n in self.objects:
                 n.show()

@@ -1,20 +1,26 @@
 import pygame
 from controllable import Controllable
 from collider import Collider
+from physicbody import PhysicBody
+from world import World
 
 class Block(Controllable):
     other_objects: list
     SPEED = 5
+    static = None
 
-    def __init__(self, size, color, controllable = False):
+    def __init__(self, size, color, controllable = False, mass = 0):
         self.controllable = controllable
         self.size = size
         self.color = color
+        self.mass = mass
         self.position = [0,0]
         super().__init__()
         self.body = pygame.Surface(size)
         self.body.fill(self.color)
         self.collider = Collider(self.position, self.size)
+        self.world = World((0, 10), (0, 0), 25)
+        self.physicBody = PhysicBody(self.world, 50)
         
     def set_object_list(self, other_objects):
         self.other_objects = other_objects
@@ -38,13 +44,17 @@ class Block(Controllable):
         self.collider.set_position(position)
         for other in self.other_objects:
             if other is not self:
-                collision |= self.collider.checkCollision(other.collider)
+                collision |= self.collider.check_collision(other.collider)
         if not collision: 
             self.position = position
         else:
             self.collider.set_position(old_position)
         # self.show()
 
+    def update(self):
+        # self.position = self.physicBody.position() 
+        # Не понял как выполнить этот метод
+        self.check_controls()
 
     def moveUp(self):
         #TODO: поменять на вызов метода set_position
@@ -61,6 +71,9 @@ class Block(Controllable):
     
     def show(self):
         self.owner.blit(self.body, self.position)
+
+    def hide(self):
+        pass # Не знаю как реализовать этот метод
     
     def placeTo(self, owner):
         self.owner = owner

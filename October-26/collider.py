@@ -8,15 +8,15 @@ class Collider():
         self.height = size[1]
         print(f'newCollider w - {self.width} h - {self.height}')
     
-    def checkCollision(self, other):
+    def check_collision(self, other):
         if other.x > self.x:
             result_x = (other.x - self.x) < self.width
         else:
-            result_x = (self.x - other.x) > other.width
+            result_x = (self.x - other.x) < other.width
         if other.y > self.y:
             result_y = (other.y - self.y) < self.height
         else:
-            result_y = (self.y - other.y) > other.height
+            result_y = (self.y - other.y) < other.height
 
         return result_x and result_y
     

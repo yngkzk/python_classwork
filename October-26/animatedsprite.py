@@ -3,11 +3,13 @@ from block import Block
 
 class AnimatedSprite(Block): 
 
-    def __init__(self, scale, sprite_dir, frames, controllable = False): 
+    def __init__(self, scale, sprite_dir, frames, controllable = False, mass = 0): 
         self.SPEED = 8
         self.frames = frames
         self.current_frame = 0 
         self.controllable = controllable
+        self.mass = mass
+
         self.sp_up = pygame.image.load(sprite_dir + '/up.png')
         self.sp_down = pygame.image.load(sprite_dir + '/down.png')
         self.sp_right = pygame.image.load(sprite_dir + '/right.png')
