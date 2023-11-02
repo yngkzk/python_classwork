@@ -2,6 +2,7 @@ import socket
 
 
 class XoServer:
+    addr = None
 
     def __init__(self, hostname, port=10101):
         self.port = port
@@ -14,17 +15,13 @@ class XoServer:
         pass
 
     def send(self, row, col):
+        sender_ip, sender_port = self.addr[0], self.addr[1]
         message = f'{row}, {col}'
-        self.server_socket.sendto(message.encode(), self.server_address)
+        self.server_socket.sendto(message.encode(), (sender_ip, sender_port))
 
     def receive(self):
-        data, addr = self.server_socket.recvfrom(1024)
+        data, self.addr = self.server_socket.recvfrom(1024)
         message = data.decode(encoding="UTF-8")
-
-        sender_ip, sender_port = addr[0], addr[1]
-        reply_message = 'OK'
-        self.server_socket.sendto(reply_message.encode(), (sender_ip, sender_port))
-
         return tuple(map(int, message.split(', ')))
 
 

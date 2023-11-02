@@ -21,7 +21,7 @@ class XoClient:
         message = data.decode(encoding="UTF-8")
         # print('Response from the server:', data.decode(encoding='UTF-8'), sep=' ')
         print('RECEIVED', message)
-        return message, message
+        return tuple(map(int, message.split(', ')))
 
 if __name__ == '__main__':
     client = XoClient('127.0.0.1', 9900)
